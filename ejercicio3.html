@@ -1,0 +1,195 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ejercicio 3</title>
+
+ </head>
+ <style>
+   body, input{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 1.6rem;
+}
+</style>
+ <body>
+    <br>
+     <h1>EJERCICIO 3</h1>
+     <P>
+        El costo de las llamadas telefónicas internacionales depende de la zona geográfica en <br>
+        la que se encuentre el país destino y del número de minutos hablados. En la siguiente tabla <br>
+        se presenta el costo del minuto por zona. A cada zona se le ha asociado una clave. <br>
+        Nota: Para llamadas con duración menor a 30 minutos se hace descuento del 10%.
+    </P>
+
+        <table border="1px">
+            <thead>
+              <tr>
+                <th> Clave</th>
+                <th>Zona</th>
+                <th>Precio</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>12</th>
+                <td>América del Norte</td>
+                <td>$ 2.00</td>
+              </tr>
+              <tr>
+                <th>15</th>
+                <td>América Central</td>
+                <td>$ 2.20</td>
+              </tr>
+              <tr>
+                <th>18</th>
+                <td >América del Sur</td>
+                <td>$ 4.50</td>
+              </tr>
+              <tr>
+                <th>19</th>
+                <td >Europa</td>
+                <td>$ 3.50</td>
+              </tr>
+              <tr>
+                <th>23</th>
+                <td >Asia</td>
+                <td>$ 6.00</td>
+              </tr>
+              <tr>
+                <th>25</th>
+                <td >Africa</td>
+                <td>$ 6.00</td>
+              </tr>
+              <tr>
+                <th>29</th>
+                <td>Oceania</td>
+                <td>$ 5.00</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+        
+
+  <br><br>
+    <form name="llamadas" > 
+         
+        Minutos que duro la llamada: <input type="text" name="valor1"><br><br>
+        <label for="">SELECIONE LA ZONA GEOGRAFICA DE DONDE LLAMA:</label><br><br>
+        <input c type="button" name="button1" value="America del Norte" onclick="america1()">
+        <input  type="button" name="button2" value="America Central" onclick="america2()">
+        <input  type="button" name="button3" value="America del Sur" onclick="america3()"> 
+        <input  type="button" name="button4" value="Europa" onclick="europa()">
+        <input  type="button" name="button5" value="Asia" onclick="asia()">
+        <input  type="button" name="button6" value="Africa" onclick="africa()">
+        <input  type="button" name="button7" value="Oceania" onclick="oceania()">
+
+        <br><br>
+        Total a pagar es de: $ 
+       <input type="number" name="resultado">
+    </form>
+
+  </div>
+ 
+
+ 
+        <script>
+         function america1() { 
+ 
+             let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 2) * 0.10
+                total = (minutos * 2) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 2 ; document.llamadas.resultado.value = total;
+             }
+            
+ 
+              }
+         function america2() {
+ 
+            let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 2.20) * 0.10
+                total = (minutos * 2.20) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 2.20 ; document.llamadas.resultado.value = total;
+             }
+ 
+               }
+         function america3() {
+
+             let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 4.50) * 0.10
+                total = (minutos * 4.50) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 4.50 ; document.llamadas.resultado.value = total;
+             }
+ 
+             } 
+         function europa() {
+
+            let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 3.50) * 0.10
+                total = (minutos * 3.50) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 3.50 ; document.llamadas.resultado.value = total;
+             }
+         
+                     }  
+
+        function asia() {
+
+            let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 6) * 0.10
+                total = (minutos * 6) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 6 ; document.llamadas.resultado.value = total;
+             }
+        }
+
+        function africa() {
+
+            let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 6) * 0.10
+                total = (minutos * 6) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 6; document.llamadas.resultado.value = total;
+             }
+            
+        }
+
+        function oceania() {
+
+            let minutos, total , descuento;
+             minutos = parseInt(document.llamadas.valor1.value); 
+             if (minutos < 30 ) {
+                descuento = ( minutos * 5) * 0.10
+                total = (minutos * 5) - descuento; document.llamadas.resultado.value = total;
+                alert("Recibistes un descuento del 10% ")
+             } else {
+                total  = minutos * 5 ; document.llamadas.resultado.value = total;
+             }
+            
+        }
+     </script>
+ </body>
+ </html>

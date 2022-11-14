@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <style>
+        body, input{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1.6rem;
+    }
+    </style>
+    <h1>Ejercicio 7</h1>
+    <p>7.	Elaborar un algoritmo para leer la nota de diez estudiantes y mostrar cantidad de aprobados y reprobados.</p>
+    
+    <script>
+    let x =0;
+    let cant1 = 0;
+    let cant2 = 0;
+    while(x<10){
+        let nota;
+        nota=parseInt(prompt("Ingrese notas de alumnos (Del 0 al 10): "));
+        if(nota>=6){
+            cant1=cant1+1;
+        }else{
+            cant2=cant2+1;
+        }
+        x=x+1;
+    }
+    document.write("Cantidad de alumnos aprobados: "+ cant1);
+    document.write("<br>");
+    document.write("Cantidad de alumnos reprobados: " + cant2);
+
+    </script>
+</body>
+</html>

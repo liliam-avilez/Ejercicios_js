@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 </title>
+</head>
+<style>
+    body, input{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+</style>
+<body>
+    <h1>ejercicio 8</h1>
+    <p>Elabore un algoritmo con un menú simple con las cuatro operaciones básicas: sumar, restar, multiplicar, dividir.</p>
+    <form name = "menu">
+        primer numero: <input type="text" name="valor1"><br><br>
+        segundo numero: <input type="text" name="valor2"><br><br>
+        <input type="button" name="botton1" value="sumar" onclick="sumar()">
+        <input type="button" name="botton2" value="restar" onclick="resta()">
+        <input type="button" name="botton3" value="multiplicar" onclick="multiplicar()">
+        <input type="button" name="botton4" value="dividir" onclick="dividir()"><br><br>
+        resultado: <input type="text" name="resultado">
+    </form>
+    <script>
+        function sumar(){
+            let num1, num2, resu;
+            num1= parseInt(document.menu.valor1.value);
+            num2= parseInt(document.menu.valor2.value);
+            resu= num1 + num2;
+            document.menu.resultado.value = resu;
+        }
+        function resta(){
+            let num1, num2, resu;
+            num1= parseInt(document.menu.valor1.value);
+            num2= parseInt(document.menu.valor2.value);
+            resu= num1-num2;
+            document.menu.resultado.value=resu;
+        }
+        function multiplicar(){
+            let num1, num2, resu;
+            num1= parseInt(document.menu.valor1.value);
+            num2= parseInt(document.menu.valor2.value);
+            resu = num1 * num2;
+            document.menu.resultado.value=resu;
+        }
+        function dividir(){
+            let num1, num2, resu;
+            num1= parseInt(document.menu.valor1.value);
+            num2= parseInt(document.menu.valor2.value);
+            resu = num1/num2;
+            document.menu.resultado.value=resu;
+        }
+    </script>
+
+</body>
+</html>
